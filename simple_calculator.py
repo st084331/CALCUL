@@ -16,11 +16,15 @@ class Calculator:
 
     def divide(self, *args, integer_divide=False):
         for x in args:
-            if integer_divide:
-                self.value //= x
+            if(x==0):
+                print('Incorrect argument')
+                exit(0)
             else:
-                self.value /= x
-        return self
+                if integer_divide:
+                    self.value //= x
+                else:
+                    self.value /= x
+            return self
 
     def subtract(self, *args):
         self.value -= sum(args)
@@ -51,7 +55,7 @@ def fun(x):
 
 
 if __name__ == '__main__':
-    calculator = Calculator(random.randint(0,10))
+    calculator = Calculator(random.randint(0,100))
     print(calculator)
     print(calculator)
     print(calculator.power(2,3).add(1, 2, 3, 5.1).multiply(4, 0.123).subtract(4, 1, -100).divide(5, integer_divide=True).root(4))
