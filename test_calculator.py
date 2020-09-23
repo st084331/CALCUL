@@ -12,7 +12,7 @@ class TestCalculator(unittest.TestCase):
         :rtype: object
         """
         calc_value = self.calculator.value
-        self assertEqual(self.calculator.add(1, 2, 3).value, calc_value + 6)
+        self.assertEqual(self.calculator.add(1, 2, 3).value, calc_value + 6)
 
     def test_mul(self):
         calc_value = self.calculator.value
