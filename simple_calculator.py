@@ -31,6 +31,11 @@ class Calculator:
         return ans
 
     def root(self, *args):
+        ans = self
+        for x in args:
+            for i in range(x):
+                ans //= self
+        return ans
 
 
     def __repr__(self):
