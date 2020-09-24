@@ -22,8 +22,8 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calc_value, self.calculator.multiply(5, 2, 90).value)
 
     def test_divide(self):
-        calc_value = self.calculator.value/6
-        self.assertEquals(calc_value, self.calculator.divide(6).value)
+        calc_value = self.calculator.value/4
+        self.assertEquals(calc_value, self.calculator.divide(4).value)
 
     def test_pow_and_root(self):
         calc_value = sqrt(self.calculator.value ** 4)
